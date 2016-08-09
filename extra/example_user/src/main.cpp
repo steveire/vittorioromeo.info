@@ -1,4 +1,4 @@
-#include "../example_lib/library.hpp"
+#include "example_lib/library.hpp"
 
 int main()
 {
