@@ -6,7 +6,13 @@ project(example_lib)
 
 set(library_srcs
     example_lib/library/module0/module0.cpp
+    example_lib/library/module0/module0.hpp
     example_lib/library/module1/module1.cpp
+    example_lib/library/module1/module1.hpp
+    example_lib/library/module0.hpp
+    example_lib/library/module1.hpp
+    example_lib/api.hpp
+    example_lib/library.hpp
 )
 
 add_library(library_static STATIC ${library_srcs})
@@ -19,7 +25,13 @@ target_compile_definitions(library_iface
 
 set(installed_srcs
     include/example_lib/library/module0/module0.cpp
+    include/example_lib/library/module0/module0.hpp
     include/example_lib/library/module1/module1.cpp
+    include/example_lib/library/module1/module1.hpp
+    include/example_lib/library/module0.hpp
+    include/example_lib/library/module1.hpp
+    include/example_lib/api.hpp
+    include/example_lib/library.hpp
 )
 add_library(library_srcs INTERFACE)
 target_sources(library_srcs INTERFACE
